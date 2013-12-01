@@ -1,0 +1,28 @@
+{
+  "name": "mathopt",
+  "description": "Mathematical optimization methods",
+  "license": "MIT",
+  "version": "0.0.0",
+  "keywords": [
+    "numerical",
+    "math",
+    "mathematics",
+    "mathematical",
+    "minimization",
+    "minimize",
+    "maximization",
+    "maximize",
+    "optimize",
+    "optimization",
+    "mathopt"
+  ],
+  "main": "index.js",
+  "authors": [
+    "Vytautas Jakutis <vytautas@jakut.is>"
+  ],
+  "homepage": "https://npmjs.org/package/mathopt",
+  "ignore": [
+    "node_modules",
+    "bower_components"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "mathopt",
+  "description": "Mathematical optimization methods",
+  "license": "MIT",
+  "version": "0.0.0",
+  "keywords": [
+    "numerical",
+    "math",
+    "mathematics",
+    "mathematical",
+    "minimization",
+    "minimize",
+    "maximization",
+    "maximize",
+    "optimize",
+    "optimization",
+    "mathopt"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakutis/mathopt"
+  },
+  "author": "Vytautas Jakutis <vytautas@jakut.is>",
+  "bugs": {
+    "url": "https://github.com/jakutis/mathopt/issues"
+  },
+  "homepage": "https://npmjs.org/package/mathopt"
+}

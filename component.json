@@ -1,0 +1,26 @@
+{
+  "name": "mathopt",
+  "description": "Mathematical optimization methods",
+  "license": "MIT",
+  "version": "0.0.0",
+  "keywords": [
+    "numerical",
+    "math",
+    "mathematics",
+    "mathematical",
+    "minimization",
+    "minimize",
+    "maximization",
+    "maximize",
+    "optimize",
+    "optimization",
+    "mathopt"
+  ],
+  "main": "index.js",
+  "repo": "jakutis/mathopt",
+  "dependencies": {},
+  "development": {},
+  "scripts": [
+    "index.js"
+  ]
+}
