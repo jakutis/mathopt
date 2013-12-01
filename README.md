@@ -1,6 +1,6 @@
 # mathopt
 
-A JavaScript library of mathematical optimization methods
+A JavaScript library of mathematical optimization methods.
 
 ## Installation
 
@@ -17,6 +17,8 @@ A JavaScript library of mathematical optimization methods
     $ bower install mathopt
 
 ## API
+
+See [a demonstration of examples](https://jakut.is/mathopt/examples/) (source code in "examples" subfolder).
 
 ### .basicPSO
 
