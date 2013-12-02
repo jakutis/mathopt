@@ -4,15 +4,19 @@ A JavaScript library of mathematical optimization methods.
 
 ## Installation
 
-  Install with [npm](http://npmjs.org):
+Simply add to your HTML:
+
+    <script src="https://rawgithub.com/jakutis/mathopt/master/index.js"></script>
+
+Install with [npm](http://npmjs.org):
 
     $ npm install mathopt
 
-  Install with [component](http://component.io):
+Install with [component](http://component.io):
 
     $ component install jakutis/mathopt
 
-  Install with [bower](http://bower.io):
+Install with [bower](http://bower.io):
 
     $ bower install mathopt
 
@@ -32,8 +36,6 @@ All particles are initialized with the position specified in `initialPosition` o
 Initial velocities are sampled from `U(0, 2)`.
 
 ```javascript
-var mathopt = require('mathopt');
-
 var cornfield = function(x, y) {
     return Math.abs(x - 100) + Math.abs(y - 100);
 };
