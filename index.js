@@ -35,8 +35,8 @@
 
             // Normalize arguments.
             options = options || {};
-            options.oniteration = options.oniteration || function(cb) {
-                setTimeout(cb, 0);
+            options.oniteration = options.oniteration || function(i, p, v, pbest, best, cb) {
+                cb && setTimeout(cb, 0);
             };
             options.onstop = options.onstop || null;
             options.inertia = options.inertia || 0.7298;
@@ -110,7 +110,7 @@
                         result.value = cbest[best];
                         options.onstop(result);
                     } else {
-                        options.oniteration(p, v, pbest, best, function() {
+                        options.oniteration(result.iterations, p, v, pbest, best, function() {
                             iteration();
                             iterationLoop();
                         });
@@ -119,7 +119,7 @@
                 iterationLoop();
             } else {
                 while(!allIdle) {
-                    options.oniteration(p, v, pbest, best);
+                    options.oniteration(result.iterations, p, v, pbest, best);
                     iteration();
                 }
                 copy(pbest[best], result, options.dimensions);
