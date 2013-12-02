@@ -24,7 +24,12 @@ See [a demonstration of examples](https://jakut.is/mathopt/examples/) (source co
 
 Basic Particle Swarm Optimization method finds the global minimum of a given numerical function using particle swarm paradigm.
 
-Implements the algorithm that is described in an article ["Particle swarm optimization" by James Kennedy and Russel Eberhart that is published in proceedings of IEEE International Conference on Neural Networks, 1995](http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=488968).
+Implements the algorithm that is described in an article ["Particle swarm optimization" by James Kennedy and Russel Eberhart that is published in proceedings of IEEE International Conference on Neural Networks, 1995](http://dx.doi.org/10.1109/ICNN.1995.488968).
+
+The default parameters are taken from an article ["The Particle Swarm - Explosion, Stability, and Convergence in a Multidimensional Complex Space" by Maurice Clerck and James Kennedy that is published in IEEE Transactions on Evolutionary Computation (2002, issue #1 of volume #6)](http://dx.doi.org/10.1109/4235.985692).
+
+All particles are initialized with the position specified in `initialPosition` option.
+Initial velocities are sampled from `U(0, 2)`.
 
 ```javascript
 var mathopt = require('mathopt');
