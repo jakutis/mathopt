@@ -68,11 +68,19 @@ basicPSO = function(paper, mathopt) {
 
     document.body.style.margin = '10px';
 
+    var iterationsEl = document.createElement('input');
+    iterationsEl.style.position = 'absolute';
+    iterationsEl.style.background = 'transparent';
+    iterationsEl.style.borderWidth = '0';
+    iterationsEl.style.width = '200px';
+    iterationsEl.style.top = '20px';
+    iterationsEl.style.left = (window.innerWidth - 50 + 10 - 200) + 'px';
+    document.body.appendChild(iterationsEl);
+
     var canvas = document.createElement('canvas');
     canvas.width = window.innerWidth - 50;
     canvas.height = window.innerHeight - 50;
     canvas.style.border = '1px solid black';
-    canvas.style.backgroundColor = 'white';
     document.body.appendChild(canvas);
     paper.setup(canvas);
 
@@ -104,7 +112,6 @@ basicPSO = function(paper, mathopt) {
         onFrame();
     };
     var start = function() {
-        document.body.style.backgroundColor = 'white';
         for(var i = items.length; i--;) {
             items[i].remove();
         }
@@ -122,7 +129,8 @@ basicPSO = function(paper, mathopt) {
             globalAcceleration: objective.globalAcceleration,
             localAcceleration: objective.localAcceleration,
             particles: objective.particles,
-            oniteration: function(p, v, pbest, best, nextFrame) {
+            oniteration: function(iteration, p, v, pbest, best, nextFrame) {
+                iterationsEl.value = 'Iteration: ' + iteration;
                 state.p = p;
                 state.minimum[0] = pbest[best][0];
                 state.minimum[1] = pbest[best][1];
@@ -130,7 +138,6 @@ basicPSO = function(paper, mathopt) {
                 frameTimeout = setTimeout(nextFrame, 100);
             },
             onstop: function(result) {
-                document.body.style.backgroundColor = 'gray';
                 console.log('Optimization of ' + objective.name + ' has finished after ' + result.iterations + ' iterations.');
             }
         };
