@@ -42,7 +42,7 @@
             options.inertia = options.inertia || 0.7298;
             options.localAcceleration = options.localAcceleration || 2.9922/2;
             options.globalAcceleration = options.globalAcceleration || 2.9922/2;
-            options.particles = options.particles || 20;
+            options.particles = options.particles || 21;
             options.idleSpeed = options.idleSpeed || 0.01;
             if(!options.dimensions) {
                 options.dimensions = f.length;
