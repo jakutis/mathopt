@@ -38,14 +38,46 @@ var cornfield = function(x, y) {
 console.log('Minimum found at ', mathopt.basicPSO(cornfield));
 
 // demonstration of all the options
-var min = mathopt.basicPSO(function(x) {
+mathopt.basicPSO(function(x) {
     return cornfield(x[0], x[1]);
 }, {
-    particles: 50, // by default it is 21
-    dimensions: 2 // by default it is inferred from the given function; when specified - the given function must accept a vector
+    // default: 21
+    particles: 50,
+
+    // default: inferred from the given function; when specified - the given function must accept a vector
+    dimensions: 2,
+
+    // default: [0, 0]
+    initialPosition: [5, 5],
+
+    // default: 0.01
+    idleSpeed: 0.1,
+
+    // default: 0.7298
+    inertia: 0.7,
+
+    // default: 2.9922/2
+    localAcceleration: 1.5,
+
+    // default: 2.9922/2
+    globalAcceleration: 1.5,
+
+    // default: `function(i, p, v, pbest, best, cb) { cb && setTimeout(cb, 0); }`
+    // when onstop is null, cb argument is not passed
+    oniteration: function(iteration, positions, velocities, bestpositions, bestparticle, cb) {
+        console.log(iteration, bestpositions);
+        cb && setTimeout(cb, 0);
+    },
+
+    // default: null
+    // when set, switches to asynchronous behavior:
+    // - .basicPSO does not return anything
+    // - oniteration receives a `cb` callback
+    onstop: function(min) {
+        // prints "Minimum found at x=TODO, y=TODO, after TODO iterations"
+        console.log('Minimum found at x=' + min[0] + ', y=' + min[1] + ' after ' + min.iterations + ' iterations');
+    }
 });
-// prints "Minimum found at x=TODO, y=TODO, after TODO iterations"
-console.log('Minimum found at x=' + min[0] + ', y=' + min[1] + ' after ' + min.iterations + ' iterations');
 ```
 
 ## License
