@@ -4,9 +4,7 @@ basicPSO = function(paper, mathopt) {
         name: 'Rastrigin function',
         cameraTopLeft: [-10, -10],
         cameraSize: [20, 20],
-        particles: 7,
-        globalAcceleration: 1.9,
-        localAcceleration: 2,
+        particles: 10,
         f: function(x, y) {
             if(x < -5.12 || x > 5.12 || y < -5.12 || y > 5.12) {
                 return Number.POSITIVE_INFINITY;
@@ -21,9 +19,7 @@ basicPSO = function(paper, mathopt) {
         name: 'Cornfield',
         cameraTopLeft: [-200, -200],
         cameraSize: [400, 400],
-        particles: 7,
-        globalAcceleration: 2,
-        localAcceleration: 2,
+        particles: 10,
         f: function(x, y) {
             return Math.abs(x - 100) + Math.abs(y - 100);
         },
@@ -35,7 +31,7 @@ basicPSO = function(paper, mathopt) {
         name: 'Hölder table function',
         cameraTopLeft: [-20, -20],
         cameraSize: [40, 40],
-        particles: 7,
+        particles: 10,
         globalAcceleration: 2,
         localAcceleration: 2,
         f: function(x, y) {
