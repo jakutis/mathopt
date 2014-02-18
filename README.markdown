@@ -2,23 +2,34 @@
 
 A JavaScript library of mathematical optimization methods.
 
+- [Overview](#overview)
+- [Installation](#installation)
+- [API](#api)
+- [Development](#development)
+
+## Overview
+
+* Works on browsers and NodeJS.
+* Tested on these browsers:
+  * TODO
+
 ## Installation
 
-Simply add to your HTML:
+  Install manually by adding to your HTML file:
 
-    <script src="https://rawgithub.com/jakutis/mathopt/master/index.js"></script>
+    <script src="/path/to/mathopt/index.js"></script>
 
-Install with [npm](http://npmjs.org):
+  Install with [npm](https://www.npmjs.org/package/mathopt):
 
-    $ npm install mathopt
+    $ npm install --save mathopt
 
-Install with [component](http://component.io):
+  Install with [component](http://component.io/jakutis/mathopt):
 
     $ component install jakutis/mathopt
 
-Install with [bower](http://bower.io):
+  Install with [bower](http://bower.io):
 
-    $ bower install mathopt
+    $ bower install --save mathopt
 
 ## API
 
@@ -87,6 +98,7 @@ mathopt.basicPSO(function(x) {
 });
 ```
 
-## License
+## Development
 
-MIT
+    TODO
+
